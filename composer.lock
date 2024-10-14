@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31c7729dcf32897af9d466bfe8129d5e",
+    "content-hash": "e4fb1d3f92f06771c0fe5dc36edde69f",
     "packages": [
         {
             "name": "cboden/ratchet",
@@ -964,12 +964,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "33638190c6ba70693b2c0399b87804474c3dc693"
+                "reference": "4c0341b3e0a7291e752c69d2a1ed9a84b68d604c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/33638190c6ba70693b2c0399b87804474c3dc693",
-                "reference": "33638190c6ba70693b2c0399b87804474c3dc693",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/4c0341b3e0a7291e752c69d2a1ed9a84b68d604c",
+                "reference": "4c0341b3e0a7291e752c69d2a1ed9a84b68d604c",
                 "shasum": ""
             },
             "require": {
@@ -1033,7 +1033,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-10-09T08:40:40+00:00"
+            "time": "2024-10-11T19:20:58+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1192,6 +1192,96 @@
                 }
             ],
             "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
+            "name": "symfony/psr-http-message-bridge",
+            "version": "2.3.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/psr-http-message-bridge.git",
+                "reference": "581ca6067eb62640de5ff08ee1ba6850a0ee472e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/581ca6067eb62640de5ff08ee1ba6850a0ee472e",
+                "reference": "581ca6067eb62640de5ff08ee1ba6850a0ee472e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "psr/http-message": "^1.0 || ^2.0",
+                "symfony/deprecation-contracts": "^2.5 || ^3.0",
+                "symfony/http-foundation": "^5.4 || ^6.0"
+            },
+            "require-dev": {
+                "nyholm/psr7": "^1.1",
+                "psr/log": "^1.1 || ^2 || ^3",
+                "symfony/browser-kit": "^5.4 || ^6.0",
+                "symfony/config": "^5.4 || ^6.0",
+                "symfony/event-dispatcher": "^5.4 || ^6.0",
+                "symfony/framework-bundle": "^5.4 || ^6.0",
+                "symfony/http-kernel": "^5.4 || ^6.0",
+                "symfony/phpunit-bridge": "^6.2"
+            },
+            "suggest": {
+                "nyholm/psr7": "For a super lightweight PSR-7/17 implementation"
+            },
+            "default-branch": true,
+            "type": "symfony-bridge",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "2.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Bridge\\PsrHttpMessage\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "PSR HTTP message bridge",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr-17",
+                "psr-7"
+            ],
+            "support": {
+                "issues": "https://github.com/symfony/psr-http-message-bridge/issues",
+                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v2.3.1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-07-26T11:53:26+00:00"
         },
         {
             "name": "symfony/routing",

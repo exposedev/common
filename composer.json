@@ -6,7 +6,10 @@
     "autoload": {
         "psr-4": {
             "Expose\\Common\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "authors": [
         {
