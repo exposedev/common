@@ -24,7 +24,7 @@
     "minimum-stability": "dev",
     "require": {
          "cboden/ratchet": "dev-master",
-         "symfony/psr-http-message-bridge": "^2.0"
+         "symfony/psr-http-message-bridge": "^7.0"
     },
     "require-dev": {
     },
