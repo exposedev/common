@@ -15,9 +15,14 @@ function warning(string $message): void
     render("<div class='ml-3 px-2 text-orange-600 bg-orange-100'>$message</div>");
 }
 
-function info(string $message, int $options = OutputInterface::OUTPUT_NORMAL): void
+function info(string $message = '', int $options = OutputInterface::OUTPUT_NORMAL): void
 {
-    render("<div class='ml-3'>$message</div>", OutputInterface::VERBOSITY_VERBOSE);
+    render("<div class='ml-3'>$message</div>", $options);
+}
+
+function headline(string $message): void
+{
+    render("<div class='mt-1 ml-3 font-bold'>$message</div>");
 }
 
 function lineTable(array $data): void
@@ -40,6 +45,8 @@ HTML;
 
         render($output);
     }
+
+    render("");
 }
 
 function lineTableLabel(?string $key): string
