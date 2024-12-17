@@ -18,7 +18,7 @@ abstract class Controller implements HttpServerInterface
 
     protected $keepConnectionOpen = false;
 
-    public function onOpen(ConnectionInterface $connection, RequestInterface $request = null)
+    public function onOpen(ConnectionInterface $connection, ?RequestInterface $request = null)
     {
         $connection->contentLength = $this->findContentLength($request->getHeaders());
 
