@@ -24,7 +24,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-         "cboden/ratchet": "dev-master",
+        "cboden/ratchet": "dev-php-8.4-support",
          "symfony/psr-http-message-bridge": "^7.0",
          "nunomaduro/termwind": "^2.0"
     },
