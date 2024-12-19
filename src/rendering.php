@@ -15,6 +15,15 @@ function warning(string $message): void
     render("<div class='ml-3 px-2 text-orange-600 bg-orange-100'>$message</div>");
 }
 
+function error(string $message, bool $abort = false): void
+{
+    render("<div class='ml-3 px-2 text-red-600 bg-red-100'>$message</div>");
+
+    if ($abort) {
+        exit(1);
+    }
+}
+
 function info(string $message = '', int $options = OutputInterface::OUTPUT_NORMAL): void
 {
     render("<div class='ml-3'>$message</div>", $options);
