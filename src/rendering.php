@@ -15,6 +15,11 @@ function warning(string $message): void
     render("<div class='ml-3 px-2 text-orange-600 bg-orange-100'>$message</div>");
 }
 
+function success(string $message): void
+{
+    render("<div class='ml-3 px-2 text-green-600 bg-green-100'>$message</div>");
+}
+
 function error(string $message, bool $abort = false): void
 {
     render("<div class='ml-3 px-2 text-red-600 bg-red-100'>$message</div>");
@@ -24,14 +29,23 @@ function error(string $message, bool $abort = false): void
     }
 }
 
-function info(string $message = '', int $options = OutputInterface::OUTPUT_NORMAL): void
+function info(string $message = '', bool $newLine = false, int $options = OutputInterface::OUTPUT_NORMAL): void
 {
     render("<div class='ml-3'>$message</div>", $options);
+
+    if ($newLine) {
+        render("");
+    }
 }
 
 function headline(string $message): void
 {
     render("<div class='mt-1 ml-3 font-bold'>$message</div>");
+}
+
+function newLine(): void
+{
+    render("");
 }
 
 function lineTable(array $data): void
