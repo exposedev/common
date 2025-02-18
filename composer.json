@@ -30,6 +30,7 @@
          "nunomaduro/termwind": "^2.0"
     },
     "require-dev": {
+        "guzzlehttp/psr7": "^2.7"
     },
     "repositories": [
         {

@@ -4,12 +4,11 @@ namespace Expose\Common\Http\Controllers;
 
 use Expose\Common\Http\Controllers\Concerns\LoadsViews;
 use Expose\Common\Http\Controllers\Concerns\ParsesIncomingRequest;
+use GuzzleHttp\Psr7\Message;
 use Illuminate\Http\Request;
 use Psr\Http\Message\RequestInterface;
 use Ratchet\ConnectionInterface;
 use Ratchet\Http\HttpServerInterface;
-
-use function GuzzleHttp\Psr7\parse_request;
 
 abstract class Controller implements HttpServerInterface
 {
@@ -40,7 +39,7 @@ abstract class Controller implements HttpServerInterface
     public function onMessage(ConnectionInterface $from, $msg)
     {
         if (! isset($from->requestBuffer)) {
-            $request = parse_request($msg);
+            $request = Message::parseRequest($msg);
             $from->contentLength = $this->findContentLength($request->getHeaders());
             $from->request = $request;
             $from->requestBuffer = (string) $request->getBody();
